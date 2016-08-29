@@ -1,0 +1,62 @@
+{
+  "name": "input-plugin-currency",
+  "description": "An input plugin for a currency input type.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run nyc",
+    "pretest": "npm run lint",
+    "ava": "ava | tap-diff",
+    "ava:watch": "ava --watch | tap-diff",
+    "nyc": "nyc --all npm run ava",
+    "lint": "eslint index.js lib && eslint -c ./.eslintrc-ava.yml tests",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/punchcard-cms/input-plugin-currency.git"
+  },
+  "keywords": [
+    "punchcard-cms",
+    "input-plugin"
+  ],
+  "author": "Scott Nath",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/punchcard-cms/input-plugin-currency/issues"
+  },
+  "homepage": "https://github.com/punchcard-cms/input-plugin-currency#readme",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "coveralls": "^2.11.12",
+    "eslint": "^3.4.0",
+    "eslint-config-punchcard": "^1.0.1",
+    "ghooks": "^1.3.2",
+    "nyc": "^8.1.0",
+    "punchcard-commit-msg": "^1.0.0",
+    "punchcard-semantic-release": "^2.0.1",
+    "semantic-release": "^4.3.5",
+    "tap-diff": "^0.1.1"
+  },
+  "nyc": {
+    "exclude": [
+      "tests/**/*"
+    ]
+  },
+  "ava": {
+    "files": [
+      "tests/*.js"
+    ],
+    "failFast": true,
+    "tap": true
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "punchcard-commit-msg"
+    }
+  },
+  "release": {
+    "analyzeCommits": "punchcard-semantic-release/analyze",
+    "generateNotes": "punchcard-semantic-release/notes"
+  }
+}
