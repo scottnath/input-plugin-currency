@@ -17,11 +17,9 @@
     "type": "git",
     "url": "https://github.com/punchcard-cms/input-plugin-currency.git"
   },
-  "keywords": [
-    "punchcard-cms",
-    "input-plugin"
+  "contributors": [
+    "Scott Nath <github@scottnath.com>"
   ],
-  "author": "Scott Nath",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/punchcard-cms/input-plugin-currency/issues"
@@ -40,6 +38,14 @@
     "semantic-release": "^4.3.5",
     "tap-diff": "^0.1.1"
   },
+  "engines": {
+    "node": "5.11",
+    "npm": "^3.6"
+  },
+  "keywords": [
+    "input-plugin",
+    "punchcard-cms"
+  ],
   "nyc": {
     "exclude": [
       "tests/**/*"
