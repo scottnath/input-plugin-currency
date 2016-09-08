@@ -28,8 +28,7 @@
   "devDependencies": {
     "ava": "^0.16.0",
     "coveralls": "^2.11.12",
-    "eslint": "^2.10.0",
-    "eslint-config-punchcard": "^1.0.1",
+    "eslint-config-punchcard": "^1.1.0",
     "ghooks": "^1.3.2",
     "nyc": "^6.6.0",
     "punchcard-commit-msg": "^1.0.0",
@@ -66,5 +65,8 @@
   "release": {
     "analyzeCommits": "punchcard-semantic-release/analyze",
     "generateNotes": "punchcard-semantic-release/notes"
+  },
+  "dependencies": {
+    "eslint": "^3.4.0"
   }
 }
