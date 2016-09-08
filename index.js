@@ -12,10 +12,10 @@ const validation = require('./lib/validation.js');
  * @module currencyInputPlugin
  */
 module.exports = {
-  name: 'Currency',
-  description: 'A currency input plugin',
+  name: 'boolean',
+  description: 'A boolean input type',
   validation: {
-    currencyValidation: validation,
+    booleanValidation: validation,
   },
   inputs: {
     currency: {
