@@ -29,8 +29,9 @@ module.exports = {
       settings: {
         min: 0,
         step: '0.01',
+        symbol: '$',
       },
     },
   },
-  html: '<label for="{{currency.id}}">{{currency.label}}</label><input type="{{currency.type}}" id="{{currency.id}}" min="{{currency.min}}" name="{{currency.name}}" step="{{currency.step}}" value="{{currency.value}}" placeholder="{{currency.placeholder}}" />',
+  html: '<label for="{{currency.id}}">{{currency.label}}</label>{{currency.symbol}}<input type="{{currency.type}}" id="{{currency.id}}" min="{{currency.min}}" name="{{currency.name}}" step="{{currency.step}}" value="{{currency.value}}" placeholder="{{currency.placeholder}}" />',
 };
