@@ -15,7 +15,7 @@ module.exports = {
   name: 'boolean',
   description: 'A boolean input type',
   validation: {
-    booleanValidation: validation,
+    currencyValidation: validation,
   },
   inputs: {
     currency: {
